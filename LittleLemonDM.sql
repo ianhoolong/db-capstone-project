@@ -41,8 +41,8 @@ CREATE TABLE IF NOT EXISTS `LittleLemonDM`.`Bookings` (
   CONSTRAINT `CustomerID`
     FOREIGN KEY (`CustomerID`)
     REFERENCES `LittleLemonDM`.`CustomerDetails` (`CustomerID`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -91,18 +91,18 @@ CREATE TABLE IF NOT EXISTS `LittleLemonDM`.`Orders` (
   CONSTRAINT `BookingID`
     FOREIGN KEY (`BookingID`)
     REFERENCES `LittleLemonDM`.`Bookings` (`BookingID`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT `MenuID`
     FOREIGN KEY (`MenuID`)
     REFERENCES `LittleLemonDM`.`Menu` (`MenuID`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT `StaffID`
     FOREIGN KEY (`StaffID`)
     REFERENCES `LittleLemonDM`.`StaffInformation` (`StaffID`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
@@ -117,8 +117,8 @@ CREATE TABLE IF NOT EXISTS `LittleLemonDM`.`OrderDeliveryStatus` (
   CONSTRAINT `OrderID`
     FOREIGN KEY (`OrderID`)
     REFERENCES `LittleLemonDM`.`Orders` (`OrderID`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB;
 
 
