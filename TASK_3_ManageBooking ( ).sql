@@ -6,7 +6,7 @@ begin
     select
         case
             when count(*) > 0 then concat('Table ',table_number,' is already booked')
-            else 'available'
+            else 'Available to Book'
         end into booking_status
     from Bookings
     where booking_date = Date and table_number = TableNo;
