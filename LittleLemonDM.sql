@@ -32,7 +32,7 @@ ENGINE = InnoDB;
 -- Table `LittleLemonDM`.`Bookings`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `LittleLemonDM`.`Bookings` (
-  `BookingID` INT NOT NULL,
+  `BookingID` INT NOT NULL AUTO_INCREMENT,
   `Date` DATE NOT NULL,
   `TableNo` INT NULL,
   `CustomerID` INT NULL,
